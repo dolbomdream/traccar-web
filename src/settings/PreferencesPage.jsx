@@ -102,7 +102,8 @@ const PreferencesPage = () => {
                   <InputLabel>{t('mapActive')}</InputLabel>
                   <Select
                     label={t('mapActive')}
-                    value={attributes.activeMapStyles?.split(',') || ['locationIqStreets', 'osm', 'carto']}
+                    // value={attributes.activeMapStyles?.split(',') || ['locationIqStreets', 'osm', 'carto']}
+                    value={attributes.activeMapStyles?.split(',') || ['mapGoogleHybrid']}
                     onChange={(e, child) => {
                       const clicked = mapStyles.find((s) => s.id === child.props.value);
                       if (clicked.available) {

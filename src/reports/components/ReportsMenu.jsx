@@ -42,19 +42,19 @@ const ReportsMenu = () => {
           icon={<StarIcon />}
           selected={location.pathname === '/reports/combined'}
         />
-        <MenuItem
+        {/* <MenuItem
           title={t('reportRoute')}
           link="/reports/route"
           icon={<TimelineIcon />}
           selected={location.pathname === '/reports/route'}
-        />
+        /> */}
         <MenuItem
           title={t('reportEvents')}
           link="/reports/event"
           icon={<NotificationsActiveIcon />}
           selected={location.pathname === '/reports/event'}
         />
-        <MenuItem
+        {/* <MenuItem
           title={t('reportTrips')}
           link="/reports/trip"
           icon={<PlayCircleFilledIcon />}
@@ -77,7 +77,7 @@ const ReportsMenu = () => {
           link="/reports/chart"
           icon={<TrendingUpIcon />}
           selected={location.pathname === '/reports/chart'}
-        />
+        /> */}
         <MenuItem
           title={t('reportReplay')}
           link="/replay"
@@ -85,7 +85,7 @@ const ReportsMenu = () => {
         />
       </List>
       <Divider />
-      <List>
+      {/* <List>
         <MenuItem
           title={t('sharedLogs')}
           link="/reports/logs"
@@ -108,7 +108,7 @@ const ReportsMenu = () => {
             selected={location.pathname === '/reports/statistics'}
           />
         )}
-      </List>
+      </List> */}
     </>
   );
 };

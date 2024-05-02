@@ -55,12 +55,12 @@ const SettingsMenu = () => {
         />
         {!readonly && (
           <>
-            <MenuItem
+            {/* <MenuItem
               title={t('sharedNotifications')}
               link="/settings/notifications"
               icon={<NotificationsIcon />}
               selected={location.pathname.startsWith('/settings/notification')}
-            />
+            /> */}
             <MenuItem
               title={t('settingsUser')}
               link={`/settings/user/${userId}`}
@@ -79,7 +79,7 @@ const SettingsMenu = () => {
               icon={<CreateIcon />}
               selected={location.pathname.startsWith('/settings/geofence')}
             />
-            {!features.disableGroups && (
+            {/* {!features.disableGroups && (
               <MenuItem
                 title={t('settingsGroups')}
                 link="/settings/groups"
@@ -133,11 +133,11 @@ const SettingsMenu = () => {
                 link={supportLink}
                 icon={<HelpIcon />}
               />
-            )}
+            )} */}
           </>
         )}
       </List>
-      {manager && (
+      {/* {manager && (
         <>
           <Divider />
           <List>
@@ -165,7 +165,7 @@ const SettingsMenu = () => {
             />
           </List>
         </>
-      )}
+      )} */}
     </>
   );
 };

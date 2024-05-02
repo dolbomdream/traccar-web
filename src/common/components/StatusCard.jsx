@@ -127,7 +127,17 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
   const deviceImage = device?.attributes?.deviceImage;
 
   const positionAttributes = usePositionAttributes(t);
-  const positionItems = useAttributePreference('positionItems', 'fixTime,address,speed,totalDistance');
+    const positionItems = useAttributePreference('positionItems',  'fixTime, \
+                                                                    address, \
+                                                                    speed, \
+                                                                    totalDistance, \
+                                                                    positionLatitude, \
+                                                                    positionLongitude, \
+                                                                    positionCourse, \
+                                                                    positionAltitude, \
+                                                                    positionDeviceTime, \
+                                                                    positionServerTime, \
+                                                                    positionRssi');
 
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -228,25 +238,25 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
                 </CardContent>
               )}
               <CardActions classes={{ root: classes.actions }} disableSpacing>
-                <IconButton
+                {/* <IconButton
                   color="secondary"
                   onClick={(e) => setAnchorEl(e.currentTarget)}
                   disabled={!position}
                 >
                   <PendingIcon />
-                </IconButton>
+                </IconButton> */}
                 <IconButton
                   onClick={() => navigate('/replay')}
                   disabled={disableActions || !position}
                 >
                   <ReplayIcon />
                 </IconButton>
-                <IconButton
+                {/* <IconButton
                   onClick={() => navigate(`/settings/device/${deviceId}/command`)}
                   disabled={disableActions}
                 >
                   <PublishIcon />
-                </IconButton>
+                </IconButton> */}
                 <IconButton
                   onClick={() => navigate(`/settings/device/${deviceId}`)}
                   disabled={disableActions || deviceReadonly}
