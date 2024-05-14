@@ -137,7 +137,7 @@ const SettingsMenu = () => {
           </>
         )}
       </List>
-      {manager && (
+      {/* {manager && (
         <>
           <Divider />
           <List>
@@ -165,7 +165,7 @@ const SettingsMenu = () => {
             />
           </List>
         </>
-      )}
+      )} */}
     </>
   );
 };
