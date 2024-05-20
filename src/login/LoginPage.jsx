@@ -149,13 +149,13 @@ const LoginPage = () => {
   return (
     <LoginLayout>
       <div className={classes.options}>
-        {nativeEnvironment && changeEnabled && (
+        {/* {nativeEnvironment && changeEnabled && (
           <Tooltip title={t('settingsServer')}>
             <IconButton onClick={() => navigate('/change-server')}>
               <LockOpenIcon />
             </IconButton>
           </Tooltip>
-        )}
+        )} */}
         {languageEnabled && (
           <FormControl>
             <Select value={language} onChange={(e) => setLanguage(e.target.value)}>
