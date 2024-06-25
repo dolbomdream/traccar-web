@@ -46,7 +46,7 @@ const EventReportPage = () => {
 
   const [allEventTypes, setAllEventTypes] = useState([['allEvents', 'eventAll']]);
 
-  const [columns, setColumns] = usePersistedState('eventColumns', ['eventTime', 'type', 'attributes']);
+  const [columns, setColumns] = usePersistedState('eventColumns', ['eventTime', 'type', 'geofenceId', 'maintenanceId', 'attributes']);
   const [eventTypes, setEventTypes] = useState(['allEvents']);
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -168,7 +168,7 @@ const EventReportPage = () => {
         <div className={classes.containerMain}>
           <div className={classes.header}>
             <ReportFilter handleSubmit={handleSubmit} handleSchedule={handleSchedule}>
-              <div className={classes.filterItem}>
+              {/* <div className={classes.filterItem}> // Remove 이벤트 유형 by Bruno 240625
                 <FormControl fullWidth>
                   <InputLabel>{t('reportEventTypes')}</InputLabel>
                   <Select
@@ -189,7 +189,7 @@ const EventReportPage = () => {
                     ))}
                   </Select>
                 </FormControl>
-              </div>
+              </div> */}
               <ColumnSelect columns={columns} setColumns={setColumns} columnsArray={columnsArray} />
             </ReportFilter>
           </div>

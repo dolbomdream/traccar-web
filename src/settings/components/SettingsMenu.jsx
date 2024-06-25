@@ -47,12 +47,12 @@ const SettingsMenu = () => {
   return (
     <>
       <List>
-        <MenuItem
+        {/* <MenuItem // Remove 환경 설정 from 설정 by Bruno 240625
           title={t('sharedPreferences')}
           link="/settings/preferences"
           icon={<SettingsIcon />}
           selected={location.pathname === '/settings/preferences'}
-        />
+        /> */}
         {!readonly && (
           <>
             {/* <MenuItem

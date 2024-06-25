@@ -172,7 +172,7 @@ const UserPage = () => {
               )}
             </AccordionDetails>
           </Accordion>
-          <Accordion>
+          {/* <Accordion> // Remove 안쓰는 메뉴 by Bruno 240625
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
               <Typography variant="subtitle1">
                 {t('sharedPreferences')}
@@ -386,14 +386,14 @@ const UserPage = () => {
                 />
               </FormGroup>
             </AccordionDetails>
-          </Accordion>
-          <EditAttributesAccordion
+          </Accordion> */}
+          {/* <EditAttributesAccordion
             attribute={attribute}
             attributes={item.attributes}
             setAttributes={(attributes) => setItem({ ...item, attributes })}
             definitions={{ ...commonUserAttributes, ...userAttributes }}
             focusAttribute={attribute}
-          />
+          /> */}
           {registrationEnabled && item.id === currentUser.id && !manager && (
             <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
